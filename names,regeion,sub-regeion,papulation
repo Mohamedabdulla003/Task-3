@@ -1,0 +1,12 @@
+  let XMLHttpRequest = require('xhr2');
+let xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://restcountries.com/v3.1/all');
+xhr.send();
+xhr.onload = function (){
+    let couteries = JSON.parse(xhr.responseText);
+    console.log(couteries[0].name.comman);
+    console.log(couteries[1].region);
+    console.log(couteries[2].subregion);
+    console.log(couteries[3].population);
+    console.log(couteries);
+}
